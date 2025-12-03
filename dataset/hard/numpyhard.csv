@@ -1,0 +1,11 @@
+id,questions,ans
+1,Which numpy function is used to perform the Fast Fourier Transform (FFT)?,fft
+2,What numpy function is used to solve a system of linear equations?,linalg.solve
+3,Which numpy function is used to calculate the cross product of two arrays?,cross
+4,What numpy function is used to compute the Kronecker product of two arrays?,kron
+5,Which numpy function is used to find the singular value decomposition (SVD) of a matrix?,linalg.svd
+6,What numpy function is used to calculate the inverse of a matrix?,linalg.inv
+7,Which numpy function is used to compute the 1-D discrete Fourier Transform?,fft.fft
+8,What numpy function is used to calculate the Pearson correlation coefficient between two arrays?,corrcoef
+9,Which numpy function is used to find the indices that would sort an array?,argsort
+10,What numpy function is used to calculate the median of elements along a given axis?,medium

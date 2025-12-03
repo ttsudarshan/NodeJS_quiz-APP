@@ -1,0 +1,11 @@
+id,questions,ans
+1,What function is used to create a copy of an object with its own property descriptors?,Object.create
+2,What method is used to concatenate two or more arrays?,concat
+3,Which method is used to determine whether an array contains a specified element?,includes()
+4,What does the isNaN() function do in JavaScript?,not anumber
+5,what is the output :  String(100 + 23);,123
+6,what is the output :  Math.trunc(4.7);,4
+7,what is the output: let x = 9.656;  x.toExponential(6);,9.66E+00
+8,"what is the output: let text = ""5"";
+text = text.padStart(4,""0"")",5
+9,Which JavaScript method is used to create a new array by performing a function on each element of the calling array?,map()

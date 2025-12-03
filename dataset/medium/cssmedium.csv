@@ -1,0 +1,11 @@
+id,questions,ans
+1,What property is used to change the background color of an element?,background-color
+2,What property is used to make text bold?,font-weight
+3,What property is used to center-align text horizontally?,text-align
+4,What property is used to create rounded corners on an element?,border-radius
+5,What property is used to specify the space between lines of text?,line-height
+6,What property is used to set the opacity of an element?,opacity
+7,What property is used to specify the size of an element's font?,font-size
+8,What property is used to specify the type of cursor to be displayed?,cursor
+9,What property is used to control the flow of text around an element? ,float
+10,What property is used to change the appearance of the mouse pointer when it is over an element?,hover

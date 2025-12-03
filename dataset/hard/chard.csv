@@ -1,0 +1,11 @@
+id,questions,ans
+1,"What is ""bitwise shifting""?",Manipulation
+2,"What does ""volatile"" keyword do in C?",Optimization
+3,"What is ""recursion""?",Iteration
+4,"What is ""function pointer""?",Callback
+5,"What does ""extern"" keyword signify in C?",Declaration
+6,"What is ""const"" qualifier used for?",Immutable
+7,"What does ""volatile"" keyword ensure in multithreading?",Atomicity
+8,"What is ""bitmasking""?",Flagging
+9,"What is ""preprocessor directive""?",Macro
+10,"What is ""dynamic memory allocation""?",Heap

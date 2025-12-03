@@ -1,0 +1,12 @@
+id,questions,ans
+1,"What is the output of the following code snippet? int x = 5;
+System.out.println(x++ * 2);",10
+2,What is a constructor in Java?,Initialization
+3,What is the difference between == and .equals() method in Java?,Comparison
+4,What is a static method in Java?,Shared
+5,What is a NullPointerException in Java?,Reference
+6,What is the purpose of the super keyword in Java?,Inheritance
+7,What is polymorphism in Java?,Overloading
+8,What is an interface in Java?,Contract
+9,What is method overriding in Java?,Subclass
+10,What is the purpose of the finally block in Java exception handling?,Cleanup

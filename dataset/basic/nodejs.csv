@@ -1,0 +1,11 @@
+id,questions,ans
+1,what is the package manager for Node.js? ,npm
+2,Which keyword is used to define a variable in Node.js?,var
+3,What module is used for handling file operations in Node.js? ,fs
+4,Which command is used to initialize a Node.js project?,npm init
+5,What is the Node.js built-in module for creating web servers?,http
+6,Which method is used to include modules in Node.js?,require
+7,What utility is used to manage Node.js versions? ,nvm
+8,What data type is used to represent collections of data in Node.js?,array
+9,Which event is emitted when an error occurs in Node.js? ,error
+10,Which method is used to read user input from the command line in Node.js?,readline

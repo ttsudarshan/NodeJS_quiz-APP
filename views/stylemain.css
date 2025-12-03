@@ -1,0 +1,33 @@
+body {
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+h1{
+    color: white;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.main {
+    text-align: center;
+}
+.button1
+{
+    padding-left: 70px;
+}
+button {
+    background-color: peachpuff;
+    height: 50px;
+    width: 100px;
+    display: block;
+    margin: 10px; /* Adjust the margin as needed */
+    border-radius: 10px;
+}

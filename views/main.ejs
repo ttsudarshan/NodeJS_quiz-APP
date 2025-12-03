@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capital City Quiz</title>
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Please select the level</h1>
+    <button onclick="startQuiz()">
+      Basic
+    </button>
+    <button onclick="startQuiz1()">
+      Medium
+    </button>
+    <button onclick="startQuiz2()">
+      Hard
+    </button>
+  </div>
+
+  <script>
+    function startQuiz() {
+      window.location.href = "/basic";
+    }
+    function startQuiz1() {
+      window.location.href = "/medium";
+    }
+    function startQuiz2() {
+      window.location.href = "/hard";
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+id,questions,ans
+1,What SQL keyword is used to pivot rows into columns?,PIVOT
+2,What SQL keyword is used to unpivot columns into rows?,UNPIVOT
+3,What SQL keyword is used to create an index on a table?,CREATE INDEX
+4,What SQL keyword is used to revoke privileges from a user?,REVOKE
+5,What SQL keyword is used to grant privileges to a user?,GRANT
+6,What SQL keyword is used to alter a column in a table? ,ALTER COLUMN
+7,What SQL keyword is used to roll back transactions in case of an error? ,ROLLBACK
+8,What SQL keyword is used to perform a full-text search?,CONTAINS
+9,What SQL keyword is used to create a temporary table?,TEMPORARY
+10,What SQL keyword is used to specify conditions for a group of rows? ,having

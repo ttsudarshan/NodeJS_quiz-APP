@@ -1,0 +1,11 @@
+id,questions,ans
+1,What is the purpose of the super() function in Python?,inheritance
+2,What does the __init__ method do in Python classes?,initializes
+3,What is the output of 2 << 2 in Python?,8
+4,What does the lambda keyword signify in Python?,anonymous
+5,What is the purpose of the __str__ method in Python classes?,stringify
+6,What is the difference between == or 'is' operators in Python?,equality
+7,What is the purpose of the map() function in Python?,applies
+8,What does the finally block in a Python try-except structure do?,cleanup
+9,What does the *args parameter signify in Python function definitions?,variable
+10,What is the purpose of the __iter__ method in Python classes?,iteration

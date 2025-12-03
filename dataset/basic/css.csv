@@ -1,0 +1,11 @@
+id,questions,ans
+1,What property is used to change the color of text?,color
+2,Which property controls the size of an element's border?,Border-width
+3,What CSS property is used to specify the type of cursor to be displayed when hovering over an element?,Cursor
+4,Which property adjusts the space between letters in a text?,Letter-spacing
+5,What property sets the distance between lines of text?,Line-height
+6,What CSS property is used to make text italic?,Font-style
+7,Which property is used to align text within its container horizontally?,Text-align
+8,What CSS property adjusts the size of an element's font?,Font-size
+9,Which property is used to control the amount of space between adjacent cells in a table?,Border-spacing
+10,What CSS property sets the style of a list item marker?,List-style-type

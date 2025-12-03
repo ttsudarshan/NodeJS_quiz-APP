@@ -1,0 +1,11 @@
+id,questions,ans
+1,What method is used to add an element to the end of an array?,push
+2,What method is used to join elements of an array into a string?,join
+3,What is the JavaScript keyword used to exit a loop?,break
+4,What function is used to convert a string to an integer?,parseInt
+5,What method is used to find the index of the first occurrence of a specified value in an array?,indexOf
+6,What keyword is used to define a function in JavaScript?,function
+7,"What method is used to remove elements from an array and, if necessary, insert new elements in their place, returning the deleted elements?",splice
+8,What method in JavaScript is used to iterate through the elements of an array?,forEach
+9,Which built-in object is used to represent a date and time in JavaScript?,date
+10,How can you check if a variable is an array in JavaScript?,Array.isArray

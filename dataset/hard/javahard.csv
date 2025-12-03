@@ -1,0 +1,11 @@
+id,questions,ans
+1,What is the difference between ArrayList and LinkedList in Java?,Structure
+2,What is the use of the volatile keyword in Java?,Synchronization
+3,What is an anonymous class in Java?,Inline
+4,What is the purpose of the transient keyword in Java?,Serialization
+5,What is a lambda expression in Java?,Function
+6,What is the difference between checked and unchecked exceptions in Java?,Compilation
+7,What is the purpose of the static keyword in Java?,Class-wide
+8,What is a singleton pattern in Java?,Instance
+9,What is the use of the synchronized keyword in Java?,Thread-safe
+10,What is the difference between HashMap and Hashtable in Java?,Synchronization

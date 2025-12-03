@@ -1,0 +1,11 @@
+id,questions,ans
+1,What module is used to create a web server in Node.js?,http
+2,What method is used to include external modules in Node.js?,require
+3,What is the Node.js package manager called?,npm
+4,What is the Node.js event-driven architecture based on?,eventemitter
+5,What is the command to execute a JavaScript file in Node.js?,node
+6,What method is used to handle errors in Node.js asynchronous operations?,callback
+7,What module is used to work with file operations in Node.js?,fs
+8,What does the process.argv array contain in Node.js?,arguments
+9,What is the Node.js global object used for accessing command-line arguments?,process
+10,What is the Node.js module for making HTTP requests?,http

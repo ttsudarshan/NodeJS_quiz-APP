@@ -1,0 +1,333 @@
+body {
+  background-image: url(../images/image2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+}
+h1{
+  color: black;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  max-width: 40%;
+  height: 300px;
+  margin: 15% auto;
+  padding: 20px;
+  background-color: #b0a7b4d0;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding-top: 10px;
+}
+
+h1 {
+  text-align: center;
+}
+
+h3 {
+  margin: 0;
+}
+
+.answer-container {
+  width: 100%;
+  text-align: center;
+}
+
+input {
+  text-align: center;
+  width: 30%;
+  margin: 10px auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+button {
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-size: large;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: rgb(15, 15, 15);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.horizontal-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+button:hover {
+  background-color: rgb(61, 62, 63);
+}
+
+#result {
+  text-align: center;
+  font-size: 24px;
+}
+
+.checkmark {
+  color: transparent;
+  animation: checkmark 0.5s ease;
+}
+
+.cross {
+  color: transparent;
+  animation: cross 0.5s ease;
+}
+
+@keyframes checkmark {
+  0% {
+    color: transparent;
+  }
+  100% {
+    color: green;
+  }
+}
+
+@keyframes cross {
+  0% {
+    color: transparent;
+  }
+  100% {
+    color: red;
+  }
+}
+
+.restart-button {
+  display: inline-block;
+  background-color: #fff;
+  color: #333;
+  padding: 15px 30px;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, color 0.3s;
+}
+.buttons{
+  display: flex;
+  flex-wrap: wrap;
+  gap:10px;
+  justify-content:flex-start;
+}
+.custom-buttonc {
+  background-image: url('../images/c.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 200px;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+.custom-buttonc:active {
+  box-shadow: 0 5px #3e2152;
+  transform: translateY(4px);
+}
+.custom-buttonpython{
+  background-image: url('../images/python.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 200px;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+.custom-buttonpython:active {
+  box-shadow: 0 5px #3e2152;
+  transform: translateY(4px);
+}
+.custom-buttonjavascript {
+  background-image: url('../images/js.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 200px;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+.custom-buttonjavascript:active {
+  box-shadow: 0 5px #3e2152;
+  transform: translateY(4px);
+}
+.custom-buttoncplus{
+  background-image: url('../images/C++.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 200px;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+.custom-buttoncplus:active {
+  box-shadow: 0 5px #3e2152;
+  transform: translateY(4px);
+}
+.custom-buttoncss{
+  background-image: url('../images/css.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 200px;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+.custom-buttoncss:active {
+  box-shadow: 0 5px #3e2152;
+  transform: translateY(4px);
+}
+.custom-buttonhtml{
+  background-image: url('../images/html.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 200px;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+.custom-buttonhtml:active {
+  box-shadow: 0 5px #3e2152;
+  transform: translateY(4px);
+}
+.custom-buttonnodejs:active {
+  box-shadow: 0 5px #3e2152;
+  transform: translateY(4px);
+}
+.custom-buttonnodejs
+{
+  background-image: url('../images/node.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 200px;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+.custom-buttonsql
+{
+  background-image: url('../images/sql.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 200px;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+.custom-buttonsql:active {
+  box-shadow: 0 5px #3e2152;
+  transform: translateY(4px);
+}
+.custom-buttonjava
+{
+  background-image: url('../images/java-logo-vert-blk.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 200px;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+.custom-buttonjava:active {
+  box-shadow: 0 5px #3e2152;
+  transform: translateY(4px);
+}
+.custom-buttonnumpy
+{
+  background-image: url('../images/numpy.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 200px;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+.custom-buttonnumpy:active {
+  box-shadow: 0 5px #3e2152;
+  transform: translateY(4px);
+}
+.custom-buttonpandas
+{
+  background-image: url('../images/pandas.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 200px;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+.custom-buttonpandas:active {
+  box-shadow: 0 5px #3e2152;
+  transform: translateY(4px);
+}

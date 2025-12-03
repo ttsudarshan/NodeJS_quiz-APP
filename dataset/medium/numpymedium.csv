@@ -1,0 +1,11 @@
+id,questions,ans
+1,What numpy function is used to create an array filled with zeros?,zeros
+2,Which numpy function is used to find the mean of elements along a given axis?,mean
+3,What numpy function is used to perform element-wise multiplication of two arrays?,multipy
+4,What numpy function returns the indices of the maximum values along an axis?,argmax
+5,Which numpy function is used to calculate the dot product of two arrays?,.
+6,What numpy function is used to generate random numbers from a uniform distribution?,random
+7,Which numpy function is used to find the unique elements of an array?,unique
+8,What numpy function is used to calculate the eigenvalues and eigenvectors of a square array?,eig
+9,Which numpy function is used to concatenate arrays along a given axis?,concatenate
+10,What numpy function is used to calculate the cumulative sum of elements along a given axis?,cumsum

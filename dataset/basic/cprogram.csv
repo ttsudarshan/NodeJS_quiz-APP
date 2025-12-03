@@ -1,0 +1,11 @@
+id,questions,ans
+1,What is the C function used to get a string input from the user?,gets
+2,Which C function is used to print a string to the console?,puts
+3,What is the C keyword for declaring a variable?,int
+4,Which symbol is used for a single-line comment in C?,//
+5,Which symbol is used to access a structure member in C?,.
+6,Which function is used to get input from the user in C?,scanf
+7,Which function is used to print output to the screen in C?,printf
+8,What is the C keyword for defining a constant?,const
+9,Which header file is used for input and output operations in C?,stdio.h
+10,Which operator is used for dereferencing a pointer in C?,*

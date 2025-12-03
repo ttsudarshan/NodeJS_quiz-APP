@@ -1,0 +1,11 @@
+id,questions,ans
+1,What is a lambda function in C++?,Anonymous
+2,What is the difference between nullptr and NULL in C++?,pointer
+3,What is the purpose of the volatile keyword in C++?,Optimization
+4,What is the difference between reinterpret_cast and static_cast in C++?,type
+5,What is a template in C++?,generic
+6,What is the purpose of the mutable keyword in C++?,state
+7,What is a smart pointer in C++?,Ownership
+8,What is the difference between std::map and std::unordered_map in C++?,Structure
+9,What is the difference between a deep copy and a shallow copy in C++?,Duplication
+10,What is a move constructor in C++?,Transfer

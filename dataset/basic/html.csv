@@ -1,0 +1,11 @@
+id,questions,ans
+1,What does HTML stand for?,HyperText Markup Language
+2,What is the main purpose of HTML?,Markup
+3,What tag is used to create a hyperlink in HTML?,<a>
+4,"Which HTML tag is used to define the structure of an HTML document, including the <head> and <body> sections?",<html>
+5,What tag is used to create a line break in HTML?,<br>
+6,Which HTML tag is used to create an unordered list?,<ul>
+7,What tag is used to define a paragraph in HTML?,<p>
+8,"Which HTML attribute specifies an alternate text for an image, if the image cannot be displayed?",alt
+9,What tag is used to define a table row in HTML?,<tr>
+10,Which HTML tag is used to emphasize text?,<em>

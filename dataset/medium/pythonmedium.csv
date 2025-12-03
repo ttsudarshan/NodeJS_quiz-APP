@@ -1,0 +1,11 @@
+id,questions,ans
+1,What method is used to remove an item from a list by its index?,pop
+2,What keyword is used to define a function in Python?,def
+3,Which data structure in Python is unordered and mutable?,dictionary
+4,What does the split() method do on a string?,splits
+5,Which operator is used for exponentiation in Python?,**
+6,What is the keyword used to define a loop that will continue executing until a condition is met?,while
+7,What built-in function can be used to sort a list in Python?,sort
+8,Which operator is used for membership testing in Python?,in
+9,What does the strip() method do on a string?,removes
+10,What is the purpose of the append() method for lists?,adds

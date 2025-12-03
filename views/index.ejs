@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered Quiz</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            margin: 0;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .stats-container {
+            background: rgba(255, 255, 255, 0.95);
+            color: #1f2937;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 20px 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 15px;
+            background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+            border-radius: 10px;
+        }
+        
+        .stat-value {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .stat-label {
+            font-size: 0.95em;
+            color: #6b7280;
+            margin-top: 5px;
+        }
+        
+        .level-badge {
+            display: inline-block;
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin: 15px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .level-basic { 
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%); 
+            color: white; 
+        }
+        .level-medium { 
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); 
+            color: white; 
+        }
+        .level-hard { 
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); 
+            color: white; 
+        }
+        
+        .feedback-container {
+            padding: 25px;
+            border-radius: 15px;
+            margin: 20px 0;
+            animation: slideIn 0.3s ease-in;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feedback-correct {
+            background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+            border-left: 6px solid #10b981;
+        }
+        
+        .feedback-incorrect {
+            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+            border-left: 6px solid #ef4444;
+        }
+        
+        .level-change {
+            background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+            border-left: 6px solid #3b82f6;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            animation: pulse 0.5s ease-in;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .hint-container {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border-left: 6px solid #f59e0b;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            display: none;
+            animation: slideIn 0.3s ease-in;
+        }
+        
+        .hint-button {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 8px;
+            font-weight: 600;
+            transition: all 0.3s;
+            box-shadow: 0 4px 10px rgba(245, 158, 11, 0.3);
+        }
+        
+        .hint-button:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(245, 158, 11, 0.4);
+        }
+        
+        .hint-button:disabled {
+            background: #9ca3af;
+            cursor: not-allowed;
+            opacity: 0.6;
+            transform: none;
+        }
+        
+        .explanation-box {
+            background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+            border-left: 6px solid #6366f1;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .ai-badge {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            display: inline-block;
+            margin-left: 10px;
+            font-weight: 600;
+            box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+        
+        .question-container {
+            background: white;
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            margin: 20px 0;
+        }
+        
+        .question-text {
+            font-size: 1.3em;
+            line-height: 1.7;
+            color: #1f2937;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #e5e7eb;
+        }
+        
+        .options-container {
+            margin: 25px 0;
+        }
+        
+        .option-label {
+            display: block;
+            padding: 18px;
+            margin: 12px 0;
+            background: #f9fafb;
+            border: 2px solid #e5e7eb;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1.05em;
+        }
+        
+        .option-label:hover {
+            background: #f3f4f6;
+            border-color: #667eea;
+            transform: translateX(5px);
+        }
+        
+        .option-label input[type="radio"] {
+            margin-right: 12px;
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+        
+        .submit-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 16px 50px;
+            border-radius: 10px;
+            font-size: 1.15em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+            width: 100%;
+            margin-top: 20px;
+        }
+        
+        .submit-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+        }
+        
+        .submit-button:active {
+            transform: translateY(-1px);
+        }
+        
+        .reset-button {
+            background: #6b7280;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 10px 8px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .reset-button:hover {
+            background: #4b5563;
+            transform: translateY(-2px);
+        }
+        
+        .controls {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎯 AI-Powered Quiz <span class="ai-badge">✨ AI Enhanced</span></h1>
+        </div>
+        
+        <!-- Stats Dashboard -->
+        <% if (locals.stats) { %>
+        <div class="stats-container">
+            <div class="stat-item">
+                <div class="stat-value"><%= stats.correct %></div>
+                <div class="stat-label">✅ Correct</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value"><%= stats.total %></div>
+                <div class="stat-label">📊 Total</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value"><%= stats.streak %></div>
+                <div class="stat-label">🔥 Streak</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value"><%= stats.total > 0 ? ((stats.correct / stats.total) * 100).toFixed(1) : 0 %>%</div>
+                <div class="stat-label">🎯 Accuracy</div>
+            </div>
+        </div>
+        <% } %>
+        
+        <!-- Current Level Badge -->
+        <% if (locals.currentLevel) { %>
+        <div style="text-align: center;">
+            <span class="level-badge level-<%= currentLevel %>">
+                📚 Current Level: <%= currentLevel.toUpperCase() %>
+            </span>
+        </div>
+        <% } %>
+        
+        <!-- Level Change Notification -->
+        <% if (locals.levelChange && levelChange.changed) { %>
+        <div class="level-change">
+            <strong><%= levelChange.direction === 'up' ? '🎉 Level Up!' : '📉 Level Adjusted' %></strong>
+            <p style="margin: 10px 0 0 0;">
+                You've <%= levelChange.direction === 'up' ? 'advanced' : 'moved' %> to 
+                <strong><%= levelChange.newLevel.toUpperCase() %></strong> difficulty!
+            </p>
+        </div>
+        <% } %>
+        
+        <!-- Feedback -->
+        <% if (locals.wasCorrect !== undefined) { %>
+        <div class="feedback-container <%= wasCorrect ? 'feedback-correct' : 'feedback-incorrect' %>">
+            <h3 style="margin: 0 0 10px 0; font-size: 1.5em;">
+                <%= wasCorrect ? '✅ Correct!' : '❌ Incorrect' %>
+            </h3>
+            <% if (locals.totalScore !== undefined) { %>
+            <p style="margin: 5px 0; font-size: 1.1em;">
+                <strong>Total Score:</strong> <%= totalScore %>
+            </p>
+            <% } %>
+        </div>
+        <% } %>
+        
+        <!-- Explanation -->
+        <% if (locals.explanation) { %>
+        <div class="explanation-box">
+            <h4 style="margin: 0 0 15px 0; font-size: 1.3em;">📚 Explanation:</h4>
+            <p style="margin: 0; line-height: 1.6; font-size: 1.05em;"><%= explanation %></p>
+        </div>
+        <% } %>
+        
+        <!-- Question Container -->
+        <div class="question-container">
+            <h2 style="color: #667eea; margin-bottom: 20px;">❓ Question:</h2>
+            
+            <% if (typeof question !== 'undefined' && question) { %>
+                <div class="question-text">
+                    <%= question.question || question.questions || question.ques || 'Question not available' %>
+                </div>
+                
+                <!-- Multiple Choice Options -->
+                <% if (question.options) { %>
+                <form action="/submit" method="POST" id="quizForm">
+                    <div class="options-container">
+                        <% Object.keys(question.options).forEach(key => { %>
+                        <label class="option-label">
+                            <input type="radio" name="answer" value="<%= key %>" required>
+                            <strong><%= key %>:</strong> <%= question.options[key] %>
+                        </label>
+                        <% }); %>
+                    </div>
+                    
+                    <!-- Hidden session ID field -->
+                    <input type="hidden" name="sessionId" value="<%= sessionId %>">
+                    
+                    <button type="submit" class="submit-button">
+                        📝 Submit Answer
+                    </button>
+                </form>
+                <% } else { %>
+                <!-- Text input fallback -->
+                <form action="/submit" method="POST" id="quizForm">
+                    <input type="text" name="answer" placeholder="Enter your answer" required 
+                           style="width: 100%; padding: 18px; font-size: 1.1em; border: 2px solid #e5e7eb; border-radius: 10px; margin: 20px 0; box-sizing: border-box;">
+                    <input type="hidden" name="sessionId" value="<%= sessionId %>">
+                    <button type="submit" class="submit-button">
+                        📝 Submit Answer
+                    </button>
+                </form>
+                <% } %>
+                
+                <!-- Hint System (only for AI mode) -->
+                <% if (locals.aiMode) { %>
+                <div style="margin-top: 25px; padding-top: 20px; border-top: 2px solid #e5e7eb;">
+                    <h4 style="color: #f59e0b; margin-bottom: 15px;">💡 Need Help?</h4>
+                    <button class="hint-button" onclick="getHint(1)" id="hint1Btn">
+                        💡 Get Hint 1
+                    </button>
+                    <button class="hint-button" onclick="getHint(2)" id="hint2Btn">
+                        💡 Get Hint 2
+                    </button>
+                    <div class="hint-container" id="hintContainer">
+                        <strong style="font-size: 1.1em;">💡 Hint:</strong>
+                        <p id="hintText" style="margin: 10px 0 0 0; line-height: 1.6;"></p>
+                    </div>
+                </div>
+                <% } %>
+            <% } else { %>
+                <div style="padding: 20px; background: #fee2e2; border-radius: 10px; color: #991b1b;">
+                    <strong>⚠️ Error:</strong> No question available. Please try starting a new quiz.
+                </div>
+            <% } %>
+        </div>
+        
+        <!-- Controls -->
+        <div class="controls">
+            <button class="reset-button" onclick="resetSession()">
+                🔄 Reset Progress
+            </button>
+            <button class="reset-button" onclick="window.location.href='/'">
+                🏠 Back to Home
+            </button>
+        </div>
+    </div>
+    
+    <script>
+        let hintsUsed = 0;
+        const sessionId = '<%= sessionId %>';
+        
+        console.log('Session ID:', sessionId); // Debug log
+        
+        // Add session ID to form submission
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('quizForm');
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    // Ensure session ID is present
+                    const hiddenInput = this.querySelector('input[name="sessionId"]');
+                    if (hiddenInput) {
+                        console.log('Submitting with session ID:', hiddenInput.value);
+                    }
+                });
+            }
+        });
+        
+        async function getHint(hintNumber) {
+            if (hintsUsed >= 2) {
+                alert('Maximum hints reached for this question!');
+                return;
+            }
+            
+            const btn = document.getElementById(`hint${hintNumber}Btn`);
+            btn.disabled = true;
+            btn.textContent = 'Loading...';
+            
+            try {
+                const response = await fetch('/hint', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'user-session-id': sessionId
+                    },
+                    body: JSON.stringify({ 
+                        hintNumber: hintNumber,
+                        sessionId: sessionId 
+                    })
+                });
+                
+                if (!response.ok) {
+                    throw new Error('Failed to get hint');
+                }
+                
+                const data = await response.json();
+                
+                document.getElementById('hintContainer').style.display = 'block';
+                document.getElementById('hintText').textContent = data.hint;
+                
+                hintsUsed++;
+                btn.textContent = `✓ Hint ${hintNumber} Used`;
+                
+                if (hintsUsed >= 2) {
+                    document.getElementById('hint1Btn').disabled = true;
+                    document.getElementById('hint2Btn').disabled = true;
+                }
+            } catch (error) {
+                console.error('Error getting hint:', error);
+                alert('Unable to get hint at this time. Please try again.');
+                btn.disabled = false;
+                btn.textContent = `💡 Get Hint ${hintNumber}`;
+            }
+        }
+        
+        async function resetSession() {
+            if (confirm('Are you sure you want to reset your progress? This will reset your level and scores.')) {
+                try {
+                    const response = await fetch('/reset-session', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'user-session-id': sessionId
+                        },
+                        body: JSON.stringify({ sessionId: sessionId })
+                    });
+                    
+                    if (response.ok) {
+                        alert('✅ Progress reset successfully!');
+                        window.location.href = '/';
+                    } else {
+                        throw new Error('Reset failed');
+                    }
+                } catch (error) {
+                    console.error('Error resetting session:', error);
+                    alert('Unable to reset session. Please try again.');
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+id,questions,ans
+1,What property is used to create a gradient background?,gradient
+2,What property is used to specify the space between an element's border and its content?,padding
+3,What property is used to create a shadow effect around an element?,box-shadow
+4,What property is used to specify the order of flexible items in a flex container?,order
+5,What property is used to make text italic?,font-style
+6,What property is used to specify the amount of space between words in a text?,word-spacing
+7,What property is used to rotate an element?,transform
+8,What property is used to change the style of a list item marker?,list-style-type
+9,What property is used to control the size of an element relative to the size of its container?,flex-grow
+10,What property is used to add a transition effect to an element's CSS changes?,transition

@@ -1,0 +1,11 @@
+id,questions,ans
+1,What is the purpose of the cluster module in Node.js?,scaling
+2,What is a potential drawback of using Node.js for CPU-bound tasks?,single-threaded
+3,What is the Node.js built-in module for handling streams?,stream
+4,What does the util.promisify function do in Node.js?,promises
+5,What is the purpose of the child_process module in Node.js?,spawning
+6,What is the difference between setTimeout and setImmediate in Node.js?,event loop
+7,What is the purpose of the vm module in Node.js?,sandboxing
+8,What is the Node.js module for working with streams in the file system?,fs
+9,What is the purpose of the os module in Node.js,operating
+10,What is the Node.js module for creating child processes?,child_process

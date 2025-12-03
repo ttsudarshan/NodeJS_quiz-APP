@@ -1,0 +1,11 @@
+id,questions,ans
+1,What SQL keyword is used to calculate the average value of a column?,avg
+2,What SQL keyword is used to find the maximum value in a column?,max
+3,What SQL keyword is used to find the minimum value in a column? ,min
+4,What SQL keyword is used to find the sum of values in a column? ,sum
+5,What SQL keyword is used to select a subset of rows from a table based on a condition? ,where
+6,What SQL keyword is used to retrieve rows from one table that do not have a corresponding row in another table?,left join
+7,What SQL keyword is used to enforce data integrity by limiting the values that can be inserted into a column? ,CONSTRAINT
+8,What SQL keyword is used to rename a table? ,ALTER TABLE
+9,What SQL keyword is used to remove duplicates from a result set?,DISTINCT
+10,What SQL keyword is used to create a new table based on the result of a query?,CREATE TABLE AS

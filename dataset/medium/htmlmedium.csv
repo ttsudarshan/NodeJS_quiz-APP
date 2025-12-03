@@ -1,0 +1,11 @@
+id,questions,ans
+1,"What attribute in the <input> tag specifies the type of input field, such as text or checkbox?",type
+2,Which tag is used to define the header for a table or a section in HTML5?,<header>
+3,What tag is used to embed an audio file in HTML?,<audio>
+4,What attribute in the <form> tag specifies the HTTP method used to send form data to the server?,method
+5,Which HTML element is used to define important text?,<strong>
+6,What is the default type of a <button> element if the type attribute is not specified?,submit
+7,"What attribute in the <button> tag specifies the name of the button, used for form submission?",name
+8,Which attribute is used to specify the width of an image in HTML?,width
+9,What tag is used to define an unordered list in HTML?,<ol>
+10,Which HTML tag is utilized to delineate a header cell within an HTML table structure?,<th>

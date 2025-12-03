@@ -1,0 +1,11 @@
+id,questions,ans
+1,What tag is used to embed an external application or interactive content in HTML?,<embed>
+2,Which attribute is used to define the character encoding for the document in HTML5?,charset
+3,"What tag is used to define a figure in HTML, such as an image with a caption?",<figure>
+4,Which attribute is used to specify the relationship between the current document and the linked document in the anchor tag?,rel
+5,What tag is used to create a progress bar in HTML5?,<progress>
+6,Which attribute is used to provide additional information about an element for accessibility purposes in HTML5?,aria-*
+7,What tag is used to define a section that contains navigation links in HTML5?,<nav>
+8,Which attribute is used to indicate whether the content of an input field is editable or not in HTML? ,readonly
+9,What tag is used to define a container for an external application or interactive content in HTML?,<object>
+10,Which attribute is used to specify the pattern that a text input field must match in HTML5?,pattern

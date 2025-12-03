@@ -1,0 +1,11 @@
+id,questions,ans
+1,What does the sizeof operator return?,size
+2,What is the purpose of the static keyword in C++?,scope
+3,What is the difference between malloc() and new in C++?,allocation
+4,What does the const keyword signify in a C++ declaration?,constant
+5,What does the virtual keyword do in C++?,Polymorphism
+6,What is an iterator in C++?,access
+7,What is function overloading in C++?,signature
+8,What is the purpose of the this pointer in C++?,self
+9,What is a reference variable in C++?,alias
+10,What is the difference between break and continue in C++?,control

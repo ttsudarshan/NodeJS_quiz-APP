@@ -1,0 +1,11 @@
+id,questions,ans
+1,What is the primary data type for representing whole numbers in Java?,int
+2,Which keyword is used to define a subclass in Java?,extends
+3,What is the default value for a boolean variable in Java?,FALSE
+4,Which loop is used when the number of iterations is known in advance?,for
+5,Which access modifier makes a variable accessible only within its own class?,private
+6,What does JVM stand for?,Java Virtual Machine
+7,Which method is called automatically when an object is created?,constructor
+8,What is the keyword in Java used to define a constant variable? Final or const,final
+9,What is the Java keyword used for inheritance?,extends
+10,What is the process of combining data and methods into a single unit called?,Encapsulation

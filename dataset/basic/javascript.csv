@@ -1,0 +1,11 @@
+id,questions,ans
+1,What keyword declares a variable that cannot be reassigned?,const
+2,What type of loop executes a block of code a number of times?,for
+3,What method removes the last element from an array and returns that element?,pop
+4,What keyword declares a block scope local variable?,let
+5,What keyword is used to define a function in JavaScript?,function
+6,What method is used to join the elements of an array into a string?,join
+7,What keyword defines a function that can be called without creating an instance of the class?,static
+8,What method is used to execute a function after a specified number of milliseconds?,setTimeout
+9,What keyword is used to exit a loop prematurely?,break
+10,What operator is used to access a property or method of an object?,.

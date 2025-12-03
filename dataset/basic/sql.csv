@@ -1,0 +1,11 @@
+id,questions,ans
+1,What keyword is used to retrieve data from a database table?,SELECT
+2,What SQL command is used to insert new data into a database table?,INSERT
+3,What SQL keyword is used to filter results in a WHERE clause based on multiple conditions?,AND
+4,What SQL command is used to delete data from a database table?,DELETE
+5,What SQL function is used to count the number of rows returned by a query?,COUNT
+6,What SQL clause is used to sort the result set based on specified columns?,ORDER BY
+7,What SQL keyword is used to retrieve unique records from a result set?,DISTINCT
+8,What SQL command is used to modify existing data in a database table?,UPDATE
+9,What SQL clause is used to group rows that have the same values into summary rows?,GROUP BY
+10,What SQL keyword is used to select records based on a range of values?,BETWEEN

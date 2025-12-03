@@ -1,0 +1,12 @@
+id,questions,ans
+1,"What does ""IDE"" stand for?",Integrated Development Environment
+2,What is the extension for C++ header files?,.h
+3,What keyword is used to define a function?,void
+4,Which operator is used to access the member of a structure?,.
+5,What keyword is used for conditional branching in C++? ,if else
+6,What is a function that calls itself called?,Recursive
+7,Which loop is guaranteed to execute at least once?,do-while
+8,What type of variable is declared without a specific data type?,auto
+9,What is the operator used for pointer access?,arrow
+10,What is a type of loop that repeats a group of statements based on the value of a condition?,while
+11,Which header file is used to perform input and output operations in C++?,iostream

@@ -1,0 +1,11 @@
+id,questions,ans
+1,"What is a ""pointer""?",address
+2,"What does ""malloc"" stand for?",memory
+3,"What is the purpose of ""fgets"" function?",input
+4,"What does ""struct"" keyword do?",group
+5,"What does ""strcmp"" function do?",Compare
+6,"What is the purpose of ""typedef"" keyword?",alias
+7,"What does ""static"" keyword signify in a function?",scope
+8,"What is a ""union"" in C?",share
+9,"What does ""break"" keyword do in a loop?",terminate
+10,"What is the role of ""include"" directive in C?",import

@@ -1,0 +1,11 @@
+id,questions,ans
+1,What function is used to read a CSV file into a DataFrame?,read_csv
+2,How do you access the first five rows of a DataFrame?,head
+3,Which method is used to check for missing values in a DataFrame?,isnull
+4,What function is used to drop rows with missing values from a DataFrame?,dropna
+5,What function is used to apply a custom function to each element of a DataFrame?,apply
+6,Which method is used to calculate summary statistics of a DataFrame?,describe
+7,What function is used to rename columns in a DataFrame?,rename
+8,Which function is used to group data in a DataFrame?,groupby
+9,How do you sort values in a DataFrame?,sort_values
+10,How do you save a DataFrame to a CSV file?,to_csv

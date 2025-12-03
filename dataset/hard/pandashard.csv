@@ -1,0 +1,11 @@
+id,questions,ans
+1,How do you handle hierarchical indexing in pandas?,MultiIndex
+2,What method is used to perform vectorized string operations in pandas?,str
+3,How do you perform a rolling window calculation in pandas?,rolling
+4,What method is used to perform interpolation in pandas?,interpolate
+5,How do you perform advanced indexing using boolean arrays in pandas?,iloc
+6,What method is used to perform a forward fill in pandas?,ffill
+7,How do you perform a pivot operation without aggregation in pandas?,pivot
+8,What method is used to handle categorical data in pandas?,Categorical
+9,How do you perform a cross-tabulation in pandas?,crosstab
+10,What method is used to apply a function to groups in pandas?,apply

@@ -1,0 +1,11 @@
+id,questions,ans
+1,How do you create a new column in a DataFrame?,assign
+2,What method is used to merge two DataFrames?,merge
+3,How do you handle duplicate rows in a DataFrame?,drop_duplicates
+4,How do you group data in a DataFrame?,groupby
+5,What method is used to pivot a DataFrame?,pivot_table
+6,How do you apply a function element-wise to a DataFrame?,apply
+7,What method is used to fill missing values in pandas?,fillna
+8,How do you convert a DataFrame column to datetime format?,pd.to_datetime
+9,What method is used to sort values in a DataFrame?,sort_values
+10,How do you reset the index of a DataFrame?,reset_index
